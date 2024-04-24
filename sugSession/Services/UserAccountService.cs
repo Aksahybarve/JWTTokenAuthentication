@@ -1,4 +1,4 @@
-﻿using SugSession.Model;
+using SugSession.Model;
 using System;
 using Sitecore.Security.Accounts;
 using System.Web.Security;
@@ -40,9 +40,7 @@ namespace SugSession.Services
                         islocked = memberShipUser.IsLockedOut;
                     }
 
-                    string Password = UserHelper.EncryptDecryptPassword(authenticateRequest);
-
-                    var result = Sitecore.Security.Authentication.AuthenticationManager.Login(memberShipUser.UserName, Password, true);
+                    var result = Sitecore.Security.Authentication.AuthenticationManager.Login(memberShipUser.UserName, authenticateRequest.Password, true);
 
                     if (!result)
                     {
