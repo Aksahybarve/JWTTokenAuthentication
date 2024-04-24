@@ -1,4 +1,4 @@
-﻿using Sitecore.Security.Accounts;
+using Sitecore.Security.Accounts;
 using SugSession.Model;
 using System;
 using System.Web.Security;
@@ -31,7 +31,7 @@ namespace SugSession.Utility
 
         public static string EncryptDecryptPassword(AuthenticateRequest authenticateRequest)
         {
-            var keybytes = Encoding.UTF8.GetBytes("DgA4MwODA4MDgwODOMADA4==");
+            var keybytes = Encoding.UTF8.GetBytes("wOOMgwO4MDgA4MDDDAADA4==");
             var iv = Encoding.UTF8.GetBytes("8080808080808080");
             string decryptedPassword;
             if (authenticateRequest.Encrypted.Equals("true", StringComparison.InvariantCultureIgnoreCase))
